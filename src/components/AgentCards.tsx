@@ -35,8 +35,12 @@ const agents: AgentCard[] = [
 
 const AgentCards = () => {
   return (
-    <section className="py-16 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-20 px-6 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      
+      <div className="relative max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 animate-fade-in">
           三大智能体助力精准育人
         </h2>
@@ -49,13 +53,17 @@ const AgentCards = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Card */}
-              <div className="relative h-full bg-card/80 backdrop-blur-xl rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-strong hover:-translate-y-2">
+              <div className="relative h-full bg-card/90 backdrop-blur-2xl rounded-3xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-strong hover:-translate-y-3 shadow-medium">
                 {/* Gradient border effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${agent.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${agent.gradient} opacity-0 group-hover:opacity-15 rounded-3xl transition-all duration-500`} />
+                
+                {/* Inner glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500" />
                 
                 {/* Icon */}
-                <div className={`inline-flex p-4 bg-gradient-to-br ${agent.gradient} rounded-xl mb-6 shadow-medium text-white`}>
+                <div className={`relative inline-flex p-5 bg-gradient-to-br ${agent.gradient} rounded-2xl mb-6 shadow-strong text-white group-hover:scale-110 transition-transform duration-500`}>
                   {agent.icon}
+                  <div className="absolute inset-0 bg-white/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 
                 {/* Content */}
@@ -68,10 +76,10 @@ const AgentCards = () => {
                 
                 {/* Action button */}
                 <Button 
-                  className="w-full group/btn bg-gradient-primary hover:shadow-medium transition-all duration-300"
+                  className="w-full group/btn bg-gradient-primary hover:shadow-strong transition-all duration-500 hover:scale-105 shadow-medium backdrop-blur-xl"
                 >
                   <span>进入智能体</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-2 transition-transform duration-500" />
                 </Button>
               </div>
             </div>

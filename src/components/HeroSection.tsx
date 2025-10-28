@@ -3,10 +3,10 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-secondary">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-secondary">
-        <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 opacity-10">
           <img 
             src={heroBg} 
             alt="" 
@@ -14,8 +14,9 @@ const HeroSection = () => {
           />
         </div>
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-20 left-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-float" />
       </div>
 
       {/* SVG Animation Layer */}
@@ -55,13 +56,13 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <div className="mb-8 flex items-center justify-center gap-4 animate-fade-in">
-          <div className="p-3 bg-gradient-primary rounded-2xl shadow-medium">
+          <div className="p-4 bg-gradient-primary rounded-2xl shadow-strong backdrop-blur-xl animate-float">
             <Brain className="w-8 h-8 text-primary-foreground" />
           </div>
-          <div className="p-3 bg-gradient-primary rounded-2xl shadow-medium" style={{ animationDelay: '0.1s' }}>
+          <div className="p-4 bg-gradient-primary rounded-2xl shadow-strong backdrop-blur-xl animate-float" style={{ animationDelay: '0.1s' }}>
             <LineChart className="w-8 h-8 text-primary-foreground" />
           </div>
-          <div className="p-3 bg-gradient-primary rounded-2xl shadow-medium" style={{ animationDelay: '0.2s' }}>
+          <div className="p-4 bg-gradient-primary rounded-2xl shadow-strong backdrop-blur-xl animate-float" style={{ animationDelay: '0.2s' }}>
             <FileEdit className="w-8 h-8 text-primary-foreground" />
           </div>
         </div>
@@ -75,15 +76,15 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-wrap justify-center gap-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          <div className="flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm rounded-full border border-border/50">
+          <div className="flex items-center gap-2 px-5 py-3 bg-card/70 backdrop-blur-xl rounded-full border border-primary/20 shadow-soft hover:shadow-medium hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse-glow" />
             <span className="text-sm font-medium">实时产业数据</span>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm rounded-full border border-border/50">
+          <div className="flex items-center gap-2 px-5 py-3 bg-card/70 backdrop-blur-xl rounded-full border border-accent/20 shadow-soft hover:shadow-medium hover:border-accent/40 transition-all duration-300 hover:-translate-y-1">
             <div className="w-2 h-2 bg-accent rounded-full animate-pulse-glow" />
             <span className="text-sm font-medium">AI智能分析</span>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm rounded-full border border-border/50">
+          <div className="flex items-center gap-2 px-5 py-3 bg-card/70 backdrop-blur-xl rounded-full border border-secondary/20 shadow-soft hover:shadow-medium hover:border-secondary/40 transition-all duration-300 hover:-translate-y-1">
             <div className="w-2 h-2 bg-secondary rounded-full animate-pulse-glow" />
             <span className="text-sm font-medium">产教融合</span>
           </div>

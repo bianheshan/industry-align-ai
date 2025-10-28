@@ -34,8 +34,12 @@ const cases: Case[] = [
 
 const CasesSection = () => {
   return (
-    <section className="py-16 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-20 px-6 bg-gradient-to-br from-background via-accent/5 to-background overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="relative max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">精选成功案例</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -45,12 +49,12 @@ const CasesSection = () => {
               className="group animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-full bg-gradient-card backdrop-blur-xl rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-strong">
+              <div className="relative h-full bg-card/90 backdrop-blur-2xl rounded-3xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-strong shadow-medium hover:-translate-y-2">
                 {/* Decorative gradient */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-primary opacity-10 blur-2xl rounded-full" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-primary opacity-0 group-hover:opacity-20 blur-2xl rounded-full transition-opacity duration-500" />
                 
                 <div className="relative">
-                  <div className="inline-flex p-3 bg-primary/10 rounded-xl mb-4 text-primary">
+                  <div className="inline-flex p-4 bg-primary/10 rounded-xl mb-4 text-primary shadow-soft group-hover:scale-110 transition-transform duration-500">
                     {caseItem.icon}
                   </div>
 
