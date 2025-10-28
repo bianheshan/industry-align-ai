@@ -46,8 +46,8 @@ const HeroSection = () => {
           
           <defs>
             <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(270, 70%, 60%)" />
-              <stop offset="100%" stopColor="hsl(280, 80%, 70%)" />
+              <stop offset="0%" stopColor="hsl(250, 70%, 60%)" />
+              <stop offset="100%" stopColor="hsl(260, 75%, 68%)" />
             </linearGradient>
           </defs>
         </svg>
