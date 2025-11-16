@@ -12,21 +12,21 @@ interface Resource {
 const resources: Resource[] = [
   {
     id: "1",
-    title: "2024年新能源汽车专业培养方案",
+    title: "2024年托育服务与管理专业培养方案",
     type: "培养方案",
     lastModified: "2小时前",
     status: "completed",
   },
   {
     id: "2",
-    title: "智能网联汽车产业分析报告",
+    title: "婴幼儿照护行业发展分析报告",
     type: "分析报告",
     lastModified: "1天前",
     status: "in-progress",
   },
   {
     id: "3",
-    title: "区域人才需求调研数据",
+    title: "区域托育人才需求调研数据",
     type: "数据报告",
     lastModified: "3天前",
     status: "completed",
