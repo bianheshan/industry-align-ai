@@ -9,26 +9,26 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    label: "产业数据源",
-    value: "150",
+    label: "托育数据源",
+    value: "120",
     suffix: "+",
     icon: <Database className="w-5 h-5" />,
   },
   {
     label: "AI模型调用",
-    value: "10K",
+    value: "8K",
     suffix: "+",
     icon: <Sparkles className="w-5 h-5" />,
   },
   {
     label: "合作院校",
-    value: "80",
+    value: "65",
     suffix: "+",
     icon: <BookOpen className="w-5 h-5" />,
   },
   {
-    label: "准确率提升",
-    value: "95",
+    label: "就业率提升",
+    value: "92",
     suffix: "%",
     icon: <TrendingUp className="w-5 h-5" />,
   },

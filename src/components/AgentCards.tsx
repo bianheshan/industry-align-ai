@@ -12,22 +12,22 @@ interface AgentCard {
 const agents: AgentCard[] = [
   {
     id: "regional",
-    title: "区域产业分析智能体",
-    description: "基于实时产业数据，深度分析区域汽车产业发展趋势与人才需求特征",
+    title: "区域托育产业分析智能体",
+    description: "基于实时产业数据，深度分析区域托育行业发展趋势与人才需求特征",
     icon: <MapPin className="w-8 h-8" />,
     gradient: "from-purple-500 to-blue-500",
   },
   {
     id: "talent",
-    title: "人才需求分析智能体",
-    description: "精准识别岗位能力要求，智能匹配专业技能与产业需求",
+    title: "托育人才需求分析智能体",
+    description: "精准识别托育岗位能力要求，智能匹配专业技能与行业需求",
     icon: <Users className="w-8 h-8" />,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: "curriculum",
     title: "培养方案修订智能体",
-    description: "智能生成与优化人才培养方案，确保教学内容与产业发展同步",
+    description: "智能生成与优化托育专业人才培养方案，确保教学内容与行业发展同步",
     icon: <FileText className="w-8 h-8" />,
     gradient: "from-cyan-500 to-purple-500",
   },

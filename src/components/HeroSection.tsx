@@ -72,7 +72,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          基于动态产业数据与AI大模型，为汽车专业教育提供智能化培养方案制定与优化
+          基于动态产业数据与AI大模型，为托育专业教育提供智能化培养方案制定与优化
         </p>
         
         <div className="flex flex-wrap justify-center gap-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>

@@ -11,23 +11,23 @@ interface Case {
 const cases: Case[] = [
   {
     id: "1",
-    school: "XX职业技术学院",
-    title: "新能源汽车专业改革",
-    result: "就业率提升至98%，获省级教学成果奖",
+    school: "XX幼儿师范学院",
+    title: "托育服务专业改革",
+    result: "就业率提升至96%，获省级教学成果奖",
     icon: <Award className="w-6 h-6" />,
   },
   {
     id: "2",
-    school: "XX交通职业学院",
-    title: "智能网联专业建设",
-    result: "与5家头部企业建立深度合作",
+    school: "XX职业技术学院",
+    title: "婴幼儿照护专业建设",
+    result: "与8家托育机构建立深度合作",
     icon: <Building2 className="w-6 h-6" />,
   },
   {
     id: "3",
-    school: "XX汽车工程学院",
-    title: "课程体系优化升级",
-    result: "学生技能水平提升40%",
+    school: "XX师范高等专科学校",
+    title: "早期教育课程优化升级",
+    result: "学生专业技能水平提升45%",
     icon: <TrendingUp className="w-6 h-6" />,
   },
 ];
