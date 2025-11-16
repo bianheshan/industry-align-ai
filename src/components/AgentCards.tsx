@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { MapPin, Users, FileText, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LoginDialog from "@/components/LoginDialog";
 
 interface AgentCard {
   id: string;
@@ -34,6 +36,14 @@ const agents: AgentCard[] = [
 ];
 
 const AgentCards = () => {
+  const [loginDialogOpen, setLoginDialogOpen] = useState(false);
+  const [selectedAgent, setSelectedAgent] = useState<AgentCard | null>(null);
+
+  const handleAgentClick = (agent: AgentCard) => {
+    setSelectedAgent(agent);
+    setLoginDialogOpen(true);
+  };
+
   return (
     <section className="relative py-20 px-6 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
       {/* Background decoration */}
@@ -76,6 +86,7 @@ const AgentCards = () => {
                 
                 {/* Action button */}
                 <Button 
+                  onClick={() => handleAgentClick(agent)}
                   className="w-full group/btn bg-gradient-primary hover:shadow-strong transition-all duration-500 hover:scale-105 shadow-medium backdrop-blur-xl"
                 >
                   <span>进入智能体</span>
@@ -86,6 +97,13 @@ const AgentCards = () => {
           ))}
         </div>
       </div>
+
+      {/* Login Dialog */}
+      <LoginDialog
+        open={loginDialogOpen}
+        onOpenChange={setLoginDialogOpen}
+        agentTitle={selectedAgent?.title || ""}
+      />
     </section>
   );
 };
